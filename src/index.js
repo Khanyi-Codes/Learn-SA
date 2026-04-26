@@ -11,17 +11,24 @@
 //     calendar.render();
 //   });
 
+    // Creating the garde cards
 function displayGrades(){
-    let gradesHtml =``
+    let gradesHtml =``;
 
-    let grade = 12
-   gradesHtml = `<div class = "grade-grid">   
-    <div class = "card">
+   
+
+    for (let grade = 1; grade <= 12; grade ++){
+
+    gradesHtml += `<div class = "grade-grid">   
+        <div class = "card">
         <h3>Grade ${grade}</h3>
-        <p>Explore grade ${grade} education</p>
-        <button class= "btn">Start</button>
-    </div>`;
-
+        <p>Explore Grade ${grade} education</p>
+        <button class= "btn id = "start-button ">Start</button>
+        </div>`;
+        
+    }
+ 
+  
     let gradesElement = document.querySelector("#grade-cards")
 
     gradesElement.innerHTML = gradesHtml;
